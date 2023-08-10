@@ -1,6 +1,9 @@
 
 import React from 'react';
 import './App.css';
+import Container from './Container';
+import UserIP from './UserIP';
+
 
 function Banner() {
   return <h1>Welcome to the Site Title</h1>;
@@ -32,7 +35,17 @@ function App() {
           Learn React
         </a>
       </Exhibit>
+      <Container>
+        <UserIP ipAddressType="ipv4" />
+      </Container>
+      <Container>
+        <UserIP ipAddressType="ipv6" />
+      </Container>
+
+
+
     </div>
+    
   );
 }
 
