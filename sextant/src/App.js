@@ -1,13 +1,27 @@
-import logo from './logo.svg';
+
+import React from 'react';
 import './App.css';
+
+function Banner() {
+  return <h1>Welcome to the Site Title</h1>;
+}
+
+function Exhibit({ heading, children }) {
+  return (
+    <div className="exhibit">
+      <h2>{heading}</h2>
+      {children}
+    </div>
+  );
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <Banner />
+      <Exhibit heading="Data Points">
         <p>
-        <code>this is bita</code> 
+          <code>This is Bita</code>
         </p>
         <a
           className="App-link"
@@ -17,9 +31,11 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </Exhibit>
     </div>
   );
 }
 
 export default App;
+
+
